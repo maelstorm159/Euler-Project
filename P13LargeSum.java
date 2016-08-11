@@ -6,6 +6,19 @@ import java.math.BigInteger;
 
 public class P13LargeSum {
 	
+
+	public static void main(String[] args) {
+		String [] placeHolder = data();
+		BigInteger sum = BigInteger.ZERO;
+		
+		for (String a:placeHolder){
+			sum = sum.add(new BigInteger(a));
+		}
+		String a = sum.toString().substring(0, 10);
+		System.out.println(a);
+
+	}
+	
 	public static String [] data(){
 		String[] x = {
 				"37107287533902102798797998220837590246510135740250",
@@ -109,17 +122,6 @@ public class P13LargeSum {
 				"20849603980134001723930671666823555245252804609722",
 				"53503534226472524250874054075591789781264330331690"};
 		return x;
-
-	}
-	public static void main(String[] args) {
-		String [] placeHolder = data();
-		BigInteger sum = BigInteger.ZERO;
-		
-		for (String a:placeHolder){
-			sum = sum.add(new BigInteger(a));
-		}
-		String a = sum.toString().substring(0, 10);
-		System.out.println(a);
 
 	}
 

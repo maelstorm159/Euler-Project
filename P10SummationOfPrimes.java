@@ -9,20 +9,18 @@ import java.util.List;
 public class P10SummationOfPrimes {
 	
 	public static void PrimeSummation(){
-		long startTime = System.currentTimeMillis();
 		long sum = 2;
-		List<Long> primeList = new ArrayList<>();
 		
 		for (long i=1;i<2000000;i+=2){
+			
 			if (isPrime(i)){
 				sum = sum + i;	
 			}
 		}
 		System.out.println(sum);
-		long endTime = System.currentTimeMillis();
-		System.out.println("Total time taken is "+ (endTime-startTime)/1000+" seconds");
 	}
 	
+	//check if a # is a prime
 	public static boolean isPrime(long n) {
         if (n <= 1) {return false;}
         if (n == 2) {return true;}

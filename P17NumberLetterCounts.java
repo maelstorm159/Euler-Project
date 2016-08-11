@@ -15,7 +15,7 @@ import java.util.Scanner;
 //The use of "and" when writing out numbers is in compliance with British usage.
 public class P17NumberLetterCounts {
 	
-	public static Map<Integer,String> NumToLetter(){
+	public static int NumToLetter(){
 		
 		HashMap <Integer,String> oneMap = new HashMap<>();
 		
@@ -81,27 +81,12 @@ public class P17NumberLetterCounts {
 	        sum += entry.getValue().replace(" ", "").length();
 	    }
 		
-		HashMap <Integer,String> oneMapClone = new HashMap<>();
-		oneMapClone = (HashMap<Integer, String>) oneMap.clone();
-		
-		return oneMapClone; 
-	
-	}
-	
-	public static void NumToLetterConverter(int a){
-		NumToLetter();
-		Map<Integer,String> lookUpMap = NumToLetter();
-
-		if (lookUpMap.containsKey(a)){
-			System.out.println(lookUpMap.get(a));
-		}else{
-			System.out.println("does not match");
-		}
+		return sum;
 	}
 	
 	public static void main(String[] args) {
-		NumToLetter();// 21124, only ask for 1 to 1000 and i included zero.
-		NumToLetterConverter(1002);
+		System.out.println(NumToLetter()-4);// 21124, only ask for 1 to 1000 and i included zero.
+		
 	}
 
 }

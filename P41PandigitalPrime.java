@@ -29,27 +29,23 @@ public class P41PandigitalPrime {
 		
 		for (int i=0;i<temp.length();i++){
 			int mapKey = Character.getNumericValue((temp.charAt(i)));
+			if (mapKey == 0) return false;
 			if(countMap.containsKey(mapKey) == false){
 			countMap.put(mapKey,1);
 		}else {
-			countMap.put(mapKey, countMap.get(mapKey)+1);}
+			return false;}
 		}
 		
-		for (Entry<Integer,Integer>entry:countMap.entrySet()){
-			if (entry.getValue()<1){
-				return false;
-			}else{
-				int count = 0;
-				for (int i=1;i<=temp.length();i++){
-					if (countMap.containsKey(i)){
-						count++;
-					}
-				}
-				if (count == temp.length())return true;
-				else return false;
+		int count = 0;
+		for (int i=1;i<=temp.length();i++){
+			if (countMap.containsKey(i)){
+				count++;
 			}
 		}
-		return false;
+		if (count == temp.length())return true;
+		else {
+			return false;
+		}
 	}
 	
 	public static boolean isPrime(int a){

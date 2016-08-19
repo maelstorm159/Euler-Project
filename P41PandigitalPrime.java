@@ -1,4 +1,4 @@
-package EulerProjectFinished;
+package EulerProject1To50;
 
 import java.util.HashMap;
 import java.util.HashSet;

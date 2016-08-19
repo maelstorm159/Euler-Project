@@ -1,4 +1,4 @@
-package EulerProjectFinished;
+package EulerProject1To50;
 
 //An irrational decimal fraction is created by concatenating the positive integers:
 //

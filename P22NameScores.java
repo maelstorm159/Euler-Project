@@ -1,6 +1,4 @@
-package EulerProjectFinished;
-
-import static org.hamcrest.CoreMatchers.containsString;
+package EulerProject1To50;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,9 +9,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
+
 
 //begin by sorting it into alphabetical order. Then working out the 
 //alphabetical value for each name, multiply this value by its alphabetical 

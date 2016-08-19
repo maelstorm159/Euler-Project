@@ -1,4 +1,4 @@
-package EulerProjectFinished;
+package EulerProject1To50;
 
 import java.math.BigInteger;
 import java.util.HashMap;
